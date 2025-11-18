@@ -5,14 +5,13 @@ import { getAuth } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-aut
 import { getDatabase } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
 
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_AUTH_DOMAIN",
-  databaseURL: "YOUR_DATABASE_URL",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_STORAGE_BUCKET",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID"
-};
+    apiKey: "AIzaSyBcZfexa5X_7QhFwbBVihCRiN_A8w3li1k",
+    authDomain: "attendance-system-f9dd0.firebaseapp.com",
+    projectId: "attendance-system-f9dd0",
+    storageBucket: "attendance-system-f9dd0.appspot.com",
+    messagingSenderId: "878182068092",
+    appId: "1:878182068092:web:0375f82e9d7b2d00a47ef9"
+  };
 
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
