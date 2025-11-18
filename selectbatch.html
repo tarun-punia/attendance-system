@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Select Batch</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<button id="logoutBtn" style="margin-bottom: 20px;">Logout</button>
+
+<div class="container">
+  <h1>Select Batch</h1>
+
+  <div class="batch-list">
+    <button onclick="openBatch('A-11')">A-11</button>
+    <button onclick="openBatch('A-12')">A-12</button>
+    <button onclick="openBatch('A-13')">A-13</button>
+  </div>
+</div>
+
+<script type="module">
+  // Firebase Auth Protection
+  import { auth, signOut } from "./script.js";
+
+  auth.onAuthStateChanged(user => {
+    if (!user) window.location.href = "index.html";
+  });
+
+  document.getElementById("logoutBtn").addEventListener("click", async () => {
+    await signOut(auth);
+    window.location.href = "index.html";
+  });
+
+  window.openBatch = function(batch) {
+    window.location.href = "batch.html?batch=" + batch;
+  };
+</script>
+
+</body>
+</html>

@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>Select Batch</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Teacher Login</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="container">
-  <h1>Select Batch</h1>
+    <h1>Teacher Login</h1>
 
-  <div class="batch-list">
-    <button onclick="openBatch('A-11')">A-11</button>
-    <button onclick="openBatch('A-12')">A-12</button>
-    <button onclick="openBatch('A-13')">A-13</button>
-  </div>
+    <div class="input-group">
+        <label>Email</label>
+        <input type="email" id="email" placeholder="Enter Email">
+    </div>
+
+    <div class="input-group">
+        <label>Password</label>
+        <input type="password" id="password" placeholder="Enter Password">
+    </div>
+
+    <button id="loginBtn">Login</button>
+
+    <p id="loginStatus"></p>
 </div>
 
-<script>
-function openBatch(batch) {
-  window.location.href = "batch.html?batch=" + batch;
-}
-</script>
-
+<script type="module" src="script.js"></script>
 </body>
 </html>
